@@ -3,18 +3,31 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
+import { EntradasComponent } from './entradas/entradas.component';
+
+import { HttpModule } from '@angular/http';
+import { EntradasService } from './entradas.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { IngresarEntradasComponent } from './ingresar-entradas/ingresar-entradas.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EntradasComponent,
+    NavbarComponent,
+    IngresarEntradasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EntradasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

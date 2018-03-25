@@ -1,0 +1,19 @@
+<div class="card mt-3">
+    <div class="card-body">
+        <div class="form-group">
+            <h4 class="card-title">
+                Título
+            </h4>
+            <input type="text" class="form-control"
+           placeholder="Ingrese Título" [(ngModel)]="titulo">
+            <h4 class="card-title">
+                Contenido
+            </h4>
+            <textarea class="form-control" rows="5"
+           [(ngModel)]="contenido"></textarea>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-dark" (click)="crearEntrada()">Ingresar</button>
+    </div>
+</div>

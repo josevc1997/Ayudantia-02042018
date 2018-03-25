@@ -1,0 +1,11 @@
+<div class="card mt-3" *ngFor="let entrada of entradasBlog">
+    <div class="card-header">
+        <h1> {{ entrada.titulo }} </h1>
+    </div>
+    <div class="card-body">
+        <p> {{ entrada.contenido }} <p>
+    </div>
+    <div class="card-footer">
+        <h4> {{ entrada.fechaPublicacion | date:'hh:mm dd/MM/yyyy'}} </h4>
+    </div>
+</div>
