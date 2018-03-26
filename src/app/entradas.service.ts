@@ -17,4 +17,8 @@ export class EntradasService {
     return this.http.post('/api/v1/entrada', data).map(res => res.json());
   };
 
+  getEntrada(entrada : number){
+      return this.http.get(`/api/v1/getEntrada/${entrada}`).map(res => res.json());
+  };
+
 }

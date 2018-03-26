@@ -1,0 +1,14 @@
+<div class="card mt-3">
+    <div class="card-header">
+        <h1> {{ post.titulo }} </h1>
+    </div>
+    <div class="card-body">
+        <p> {{ post.contenido }} <p>
+    </div>
+    <div class="card-footer">
+        <h4> {{ post.fechaPublicacion | date:'hh:mm dd/MM/yyyy'}} </h4>
+    </div>
+</div>
+<div class="text-center mt-3">
+    <button class="btn btn-danger btn-block btn-lg" (click)=goBack()>volver</button>
+</div>

@@ -1,6 +1,8 @@
 <div class="card mt-3" *ngFor="let entrada of entradasBlog">
     <div class="card-header">
-        <h1> {{ entrada.titulo }} </h1>
+        <a routerLink="{{ entrada.identrada }}">
+            <h1> {{ entrada.titulo }} </h1>
+        </a>
     </div>
     <div class="card-body">
         <p> {{ entrada.contenido }} <p>

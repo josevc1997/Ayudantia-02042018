@@ -17,8 +17,9 @@ export class IngresarEntradasComponent implements OnInit {
   }
 
   crearEntrada(){
-    this.entradasService.insertEntrada({"titulo": this.titulo,
-      "contenido": this.contenido}).subscribe(res=>{
+    this.entradasService.insertEntrada(
+        {"titulo": this.titulo,
+        "contenido": this.contenido}).subscribe(res=>{
           window.alert("Entrada Ingresada Correctamente");
       });
   }

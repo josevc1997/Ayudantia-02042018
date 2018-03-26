@@ -12,6 +12,7 @@ import { HttpModule } from '@angular/http';
 import { EntradasService } from './entradas.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { IngresarEntradasComponent } from './ingresar-entradas/ingresar-entradas.component';
+import { VerEntradaComponent } from './ver-entrada/ver-entrada.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { IngresarEntradasComponent } from './ingresar-entradas/ingresar-entradas
     AppComponent,
     EntradasComponent,
     NavbarComponent,
-    IngresarEntradasComponent
+    IngresarEntradasComponent,
+    VerEntradaComponent
   ],
   imports: [
     BrowserModule,

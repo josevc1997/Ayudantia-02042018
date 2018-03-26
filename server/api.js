@@ -43,4 +43,19 @@ router.post('/entrada',(req, res)=>{
     });
 });
 
+router.get('/getEntrada/:entrada', (req, res) =>{
+    var query = "SELECT * FROM entrada WHERE identrada="+req.params.entrada+";";
+    db.query(query, function(err, rows){
+        if(err){
+            console.log(err);
+            res.status(500).send({
+                data: "Ups, ha ocurrido algo"
+            });
+        }
+        else{
+            return res.status(200).send(rows);
+        }
+    });
+});
+
 module.exports = router;
