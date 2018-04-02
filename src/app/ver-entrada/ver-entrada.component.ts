@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common';
 
 import { EntradasService } from '../entradas.service';
@@ -17,6 +17,7 @@ export class VerEntradaComponent implements OnInit {
   post: any;
 
   constructor(private entradasService: EntradasService,
+              private _router: Router,
               private _route: ActivatedRoute,
               private location: Location
              ) { }
@@ -33,7 +34,8 @@ export class VerEntradaComponent implements OnInit {
   }
 
   goBack(): void {
-      this.location.back();
+      // this.location.back();
+      this._router.navigate(['']);
   }
 
 }
