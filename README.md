@@ -36,7 +36,7 @@ import { VerEntradaComponent } from './ver-entrada/ver-entrada.component';
 { path: ':page', component: VerEntradaComponent }
 ```
 
-Para trabajar con los parametros de la ruta debemos hacer lo siguiente:
+Para trabajar con los parametros de la ruta debemos hacer lo siguiente en “/blogApp/src/app/ver-entrada/ver-entrada.component.ts”:
 1. Importamos las siguientes librerias que nos ayudaran a obtener las rutas, a conectar con el service y por el momento a volver a la pagina anterior, respectivamente
 ```
 import { Router, ActivatedRoute } from '@angular/router'
@@ -52,7 +52,8 @@ constructor(private entradasService: EntradasService,
         ) { }
 ```
 
-##Obtenemos el parámetro de la ruta y realizamos la consulta al servicio.##
+##Obtenemos el parámetro de la ruta y realizamos la consulta al servicio.
+
 * "/blogApp/src/app/ver-entrada/ver-entrada.component.ts"
 
 ```
@@ -72,7 +73,7 @@ goBack(): void {
   }
 ```
 
-##Solicitamos los datos al servicio y luego a la api##
+##Solicitamos los datos al servicio y luego a la api
 
 * "/blogApp/src/app/entradas.service.ts"
 
@@ -100,7 +101,7 @@ router.get('/getEntrada/:entrada', (req, res) =>{
     });
 });
 ```
-##Finalmente se crea el html##
+##Finalmente se crea el html
 
 * "/blogApp/src/app/ver-entrada/ver-entrada.component.html"
 
