@@ -52,7 +52,7 @@ constructor(private entradasService: EntradasService,
         ) { }
 ```
 
-##Obtenemos el parámetro de la ruta y realizamos la consulta al servicio.
+### Obtenemos el parámetro de la ruta y realizamos la consulta al servicio.
 
 * "/blogApp/src/app/ver-entrada/ver-entrada.component.ts"
 
@@ -73,7 +73,7 @@ goBack(): void {
   }
 ```
 
-##Solicitamos los datos al servicio y luego a la api
+### Solicitamos los datos al servicio y luego a la api
 
 * "/blogApp/src/app/entradas.service.ts"
 
@@ -101,7 +101,7 @@ router.get('/getEntrada/:entrada', (req, res) =>{
     });
 });
 ```
-##Finalmente se crea el html
+### Finalmente se crea el html
 
 * "/blogApp/src/app/ver-entrada/ver-entrada.component.html"
 
