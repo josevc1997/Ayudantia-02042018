@@ -1,11 +1,16 @@
-const mysql = require('mysql');
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'blogApp'
+//Add Sequelize as ORM //
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('blogApp', 'root', 'password',{
+	host: 'localhost',
+	dialect: 'mysql',
+    operatorsAliases: false,
+	define: {
+		defaultScope:{
+			attributes:{
+				exclude: ['createdAt','updatedAt']
+			}
+		}
+	}
 });
-connection.connect(function(){
-    console.log("Database Conectada");
-});
-module.exports = connection;
+// Recuerden que el JSON de conexión se puede dejar en un archivo aparte
+module.exports = sequelize;

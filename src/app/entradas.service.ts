@@ -21,4 +21,8 @@ export class EntradasService {
       return this.http.get(`/api/v1/getEntrada/${entrada}`).map(res => res.json());
   };
 
+  eliminar(id : number){
+      return this.http.get(`/api/v1/eliminar/${id}`).map(res => res.json());
+  }
+
 }

@@ -14,7 +14,7 @@ import { EntradasService } from '../entradas.service';
 export class VerEntradaComponent implements OnInit {
 
   entrada: any = [];
-  post: any;
+  post: any = [];
 
   constructor(private entradasService: EntradasService,
               private _router: Router,
@@ -36,6 +36,20 @@ export class VerEntradaComponent implements OnInit {
   goBack(): void {
       // this.location.back();
       this._router.navigate(['']);
+  }
+  eliminar(){
+      this.entradasService.eliminar(this.post.identrada).subscribe(rows =>{
+          this.post = rows;
+          if(this.post=='1'){
+              window.alert("Entrada Eliminada Correctamente");
+              this._router.navigate(['']);
+
+          }
+          else if(this.post=='0'){
+               window.alert("Entrada no pudo ser Eliminada");
+           }
+          console.log(this.post);
+  });
   }
 
 }

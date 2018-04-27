@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EntradasService } from '../entradas.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-entradas',
